@@ -1,0 +1,166 @@
+<div class="apparelflow-dashboard">
+	<!-- Top Banner -->
+	<div class="dashboard-banner">
+		<div class="banner-content">
+			<div class="banner-left">
+				<img src="/assets/apparels/images/apparelflow-logo.svg" alt="ApparelFlow" class="logo">
+				<div class="banner-text">
+					<h1>ApparelFlow</h1>
+					<span>Manufacturing Management</span>
+				</div>
+			</div>
+			<div class="banner-right">
+				<div class="user-info">
+					<p class="user-name">Factory Admin</p>
+					<p class="user-email">admin@factory.com</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Main Container -->
+	<div class="dashboard-container">
+		<!-- Sidebar Navigation -->
+		<nav class="dashboard-sidebar">
+			<ul class="nav-menu">
+				<li class="nav-item active">
+					<button class="nav-button" data-route="dashboard">
+						<img src="/assets/apparels/images/dashboard-icon.svg" alt="Dashboard" class="nav-icon">
+						<span>Dashboard</span>
+					</button>
+				</li>
+				<li class="nav-item">
+					<button class="nav-button" data-route="production">
+						<img src="/assets/apparels/images/production-icon.svg" alt="Production" class="nav-icon">
+						<span>Production</span>
+					</button>
+				</li>
+				<li class="nav-item">
+					<button class="nav-button" data-route="packing-config">
+						<img src="/assets/apparels/images/packing-icon.svg" alt="Packing Config" class="nav-icon">
+						<span>Packing Config</span>
+					</button>
+				</li>
+				<li class="nav-item">
+					<button class="nav-button" data-route="packing-list">
+						<img src="/assets/apparels/images/packing-list-icon.svg" alt="Packing List" class="nav-icon">
+						<span>Packing List</span>
+					</button>
+				</li>
+				<li class="nav-item">
+					<button class="nav-button" data-route="asn-generation">
+						<img src="/assets/apparels/images/asn-icon.svg" alt="ASN Generation" class="nav-icon">
+						<span>ASN Generation</span>
+					</button>
+				</li>
+				<li class="nav-item">
+					<button class="nav-button" data-route="carton-tracking">
+						<img src="/assets/apparels/images/carton-icon.svg" alt="Carton Tracking" class="nav-icon">
+						<span>Carton Tracking</span>
+					</button>
+				</li>
+				<li class="nav-item">
+					<button class="nav-button" data-route="inspection">
+						<img src="/assets/apparels/images/inspection-icon.svg" alt="Inspection" class="nav-icon">
+						<span>Inspection</span>
+					</button>
+				</li>
+				<li class="nav-item">
+					<button class="nav-button" data-route="logistics">
+						<img src="/assets/apparels/images/logistics-icon.svg" alt="Logistics" class="nav-icon">
+						<span>Logistics</span>
+					</button>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Main Content Area -->
+		<main class="dashboard-main">
+			<!-- Dashboard Header -->
+			<div class="dashboard-header">
+				<div class="header-left">
+					<h2>Dashboard</h2>
+					<p>Manufacturing overview and key metrics</p>
+				</div>
+				<div class="header-right">
+					<img src="/assets/apparels/images/refresh-icon.svg" alt="Refresh" class="refresh-icon">
+					<span class="last-updated" id="lastUpdated">Last updated: --:--:-- --</span>
+				</div>
+			</div>
+
+			<!-- KPI Cards -->
+			<div class="kpi-cards">
+				<div class="kpi-card">
+					<div class="kpi-content">
+						<p class="kpi-label">Active Work Orders</p>
+						<p class="kpi-value" id="activeWorkOrders">24</p>
+						<div class="kpi-trend">
+							<img src="/assets/apparels/images/trend-up-icon.svg" alt="Trend Up" class="trend-icon">
+							<span class="trend-value positive">+12%</span>
+							<span class="trend-label">from last week</span>
+						</div>
+					</div>
+					<img src="/assets/apparels/images/work-orders-icon.svg" alt="Work Orders" class="kpi-image">
+				</div>
+
+				<div class="kpi-card">
+					<div class="kpi-content">
+						<p class="kpi-label">Pending Approvals</p>
+						<p class="kpi-value" id="pendingApprovals">8</p>
+						<div class="kpi-trend">
+							<img src="/assets/apparels/images/trend-down-icon.svg" alt="Trend Down" class="trend-icon">
+							<span class="trend-value negative">-3%</span>
+							<span class="trend-label">from last week</span>
+						</div>
+					</div>
+					<img src="/assets/apparels/images/approvals-icon.svg" alt="Approvals" class="kpi-image">
+				</div>
+
+				<div class="kpi-card">
+					<div class="kpi-content">
+						<p class="kpi-label">Ready for Shipping</p>
+						<p class="kpi-value" id="readyForShipping">15</p>
+						<div class="kpi-trend">
+							<img src="/assets/apparels/images/trend-up-icon.svg" alt="Trend Up" class="trend-icon">
+							<span class="trend-value positive">+25%</span>
+							<span class="trend-label">from last week</span>
+						</div>
+					</div>
+					<img src="/assets/apparels/images/shipping-icon.svg" alt="Shipping" class="kpi-image">
+				</div>
+
+				<div class="kpi-card">
+					<div class="kpi-content">
+						<p class="kpi-label">Quality Issues</p>
+						<p class="kpi-value" id="qualityIssues">2</p>
+						<div class="kpi-trend">
+							<img src="/assets/apparels/images/trend-down-icon.svg" alt="Trend Down" class="trend-icon">
+							<span class="trend-value negative">-50%</span>
+							<span class="trend-label">from last week</span>
+						</div>
+					</div>
+					<img src="/assets/apparels/images/quality-icon.svg" alt="Quality" class="kpi-image">
+				</div>
+			</div>
+
+			<!-- Main Content Grid -->
+			<div class="dashboard-content-grid">
+				<!-- Active Work Orders Section -->
+				<div class="content-section">
+					<h3>Active Work Orders</h3>
+					<div class="work-orders-list" id="workOrdersList">
+						<!-- Work orders will be populated by JavaScript -->
+					</div>
+				</div>
+
+				<!-- Recent Activities Section -->
+				<div class="content-section">
+					<h3>Recent Activities</h3>
+					<div class="activities-list" id="activitiesList">
+						<!-- Activities will be populated by JavaScript -->
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</div>
