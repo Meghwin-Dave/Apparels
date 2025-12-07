@@ -1,0 +1,638 @@
+<div class="final-inspection-application">
+	<!-- Header Section -->
+	<div class="inspection-header">
+		<div class="header-content">
+			<div class="header-left">
+				<img src="/assets/apparels/images/inspection-icon.svg" alt="Inspection" class="header-icon">
+				<div class="header-text">
+					<h1>Final Inspection Application</h1>
+					<p>Apparel Industry Quality Control - BV/ITS/SGS Standards</p>
+				</div>
+			</div>
+			<div class="header-actions">
+				<button class="btn btn-primary" id="newInspectionBtn">
+					<i class="fa fa-plus"></i> New Inspection
+				</button>
+				<button class="btn btn-default" id="viewListBtn">
+					<i class="fa fa-list"></i> View List
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Main Form Container -->
+	<div class="inspection-form-container" id="inspectionFormContainer">
+		<!-- Basic Inspection Details -->
+		<div class="form-section">
+			<h2>Basic Inspection Details</h2>
+			<div class="form-row">
+				<div class="form-group">
+					<label>Inspection Date *</label>
+					<input type="date" class="form-control" id="inspectionDate" required>
+				</div>
+				<div class="form-group">
+					<label>Inspection Type *</label>
+					<select class="form-control" id="inspectionType" required>
+						<option value="">Select Type</option>
+						<option value="Final">Final</option>
+						<option value="Inline">Inline</option>
+						<option value="Midline">Midline</option>
+						<option value="Shipment Sample">Shipment Sample</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label>Inspector Name *</label>
+					<input type="text" class="form-control" id="inspectorName" required>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group">
+					<label>Factory Name *</label>
+					<input type="text" class="form-control" id="factoryName" required>
+				</div>
+				<div class="form-group">
+					<label>Factory Address</label>
+					<input type="text" class="form-control" id="factoryAddress">
+				</div>
+				<div class="form-group">
+					<label>Production Line / Floor</label>
+					<input type="text" class="form-control" id="productionLine">
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group">
+					<label>Factory Contact Person</label>
+					<input type="text" class="form-control" id="factoryContact">
+				</div>
+			</div>
+		</div>
+
+		<!-- Buyer & Product Information -->
+		<div class="form-section">
+			<h3>Buyer & Product Information</h3>
+			<div class="form-row">
+				<div class="form-group">
+					<label>Brand / Buyer *</label>
+					<input type="text" class="form-control" id="brandBuyer" required>
+				</div>
+				<div class="form-group">
+					<label>Department *</label>
+					<select class="form-control" id="department" required>
+						<option value="">Select Department</option>
+						<option value="Mens">Mens</option>
+						<option value="Womens">Womens</option>
+						<option value="Kids">Kids</option>
+						<option value="Footwear">Footwear</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label>Product Category *</label>
+					<input type="text" class="form-control" id="productCategory" placeholder="e.g. T-Shirt, Jeans, Sneakers" required>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group">
+					<label>Style No *</label>
+					<input type="text" class="form-control" id="styleNo" required>
+				</div>
+				<div class="form-group">
+					<label>Article / Model No</label>
+					<input type="text" class="form-control" id="articleModelNo">
+				</div>
+				<div class="form-group">
+					<label>Season</label>
+					<input type="text" class="form-control" id="season" placeholder="e.g. Spring/Summer 2024">
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group">
+					<label>Size Range</label>
+					<input type="text" class="form-control" id="sizeRange" placeholder="e.g. XS-XXL, 6-12">
+				</div>
+				<div class="form-group">
+					<label>Colorways</label>
+					<input type="text" class="form-control" id="colorways" placeholder="e.g. Black, Navy, White">
+				</div>
+			</div>
+		</div>
+
+		<!-- Order Information -->
+		<div class="form-section">
+			<h3>Order Information</h3>
+			<div class="form-row">
+				<div class="form-group">
+					<label>Purchase Order No *</label>
+					<input type="text" class="form-control" id="poNumber" required>
+				</div>
+				<div class="form-group">
+					<label>Total Order Quantity *</label>
+					<input type="number" class="form-control" id="totalOrderQty" required>
+				</div>
+				<div class="form-group">
+					<label>Shipment Date</label>
+					<input type="date" class="form-control" id="shipmentDate">
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group">
+					<label>Packaging Type</label>
+					<input type="text" class="form-control" id="packagingType" placeholder="e.g. Polybag, Hanger, Box">
+				</div>
+				<div class="form-group">
+					<label class="checkbox-label">
+						<input type="checkbox" id="packagingCompliance"> Packaging Compliance (Buyer Standard)
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- Pre-Inspection Checklist -->
+		<div class="form-section">
+			<div class="section-header">
+				<h2>Pre-Inspection Checklist</h2>
+				<button class="btn btn-default btn-sm" id="addAttachmentBtn">
+					<i class="fa fa-paperclip"></i> Add Attachment
+				</button>
+			</div>
+
+			<!-- General Requirements -->
+			<div class="checklist-subsection">
+				<h4>General Requirements</h4>
+				<div id="generalRequirementsChecklist" class="checklist-items"></div>
+			</div>
+
+			<!-- Fabric / Material Readiness -->
+			<div class="checklist-subsection">
+				<h4>Fabric / Material Readiness</h4>
+				<div id="fabricReadinessChecklist" class="checklist-items"></div>
+			</div>
+
+			<!-- Compliance -->
+			<div class="checklist-subsection">
+				<h4>Compliance</h4>
+				<div id="complianceChecklist" class="checklist-items"></div>
+			</div>
+		</div>
+
+		<!-- Size-wise Order & Shipment Quantities -->
+		<div class="form-section">
+			<div class="section-header">
+				<img src="/assets/apparels/images/size-icon.svg" alt="Size" class="section-icon">
+				<div>
+					<h2>Size-wise Order & Shipment Quantities</h2>
+					<p>Track order quantities and shipment fulfillment by size</p>
+				</div>
+			</div>
+			<div class="size-input-section">
+				<input type="text" class="form-control" id="sizeInput" placeholder="Enter size (e.g., S, M, L, XL, 32, 34)">
+				<button class="btn btn-primary" id="addSizeBtn">
+					<i class="fa fa-plus"></i> Add Size
+				</button>
+			</div>
+			<div class="table-container">
+				<table class="table table-bordered" id="sizeWiseTable">
+					<thead>
+						<tr>
+							<th>Size</th>
+							<th>Order Qty</th>
+							<th>Ship Qty</th>
+							<th>Fulfillment %</th>
+							<th>No of Cartons</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody id="sizeWiseTableBody">
+						<tr class="total-row">
+							<td><strong>TOTAL</strong></td>
+							<td id="totalOrderQty">0</td>
+							<td id="totalShipQty">0</td>
+							<td id="totalFulfillment">0.00%</td>
+							<td id="totalCartons">0</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="summary-box">
+				<h4>Summary</h4>
+				<div class="summary-items">
+					<div class="summary-item">
+						<span class="summary-label">Total Order Quantity</span>
+						<span class="summary-value" id="summaryTotalOrder">0</span>
+					</div>
+					<div class="summary-item">
+						<span class="summary-label">Total Ship Quantity</span>
+						<span class="summary-value" id="summaryTotalShip">0</span>
+					</div>
+					<div class="summary-item">
+						<span class="summary-label">Overall Fulfillment</span>
+						<span class="summary-value" id="summaryFulfillment">0.00%</span>
+					</div>
+					<div class="summary-item">
+						<span class="summary-label">Total Cartons</span>
+						<span class="summary-value" id="summaryCartons">0</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- AQL Calculation -->
+		<div class="form-section">
+			<div class="section-header">
+				<img src="/assets/apparels/images/aql-icon.svg" alt="AQL" class="section-icon">
+				<div>
+					<h2>AQL Calculation</h2>
+					<p>AQL sampling based on total shipment quantity</p>
+				</div>
+			</div>
+			<div class="aql-parameters">
+				<h4>AQL Parameters</h4>
+				<div class="form-row">
+					<div class="form-group">
+						<label>Inspection Level</label>
+						<select class="form-control" id="inspectionLevel">
+							<option value="S-1">Level S-1</option>
+							<option value="S-2">Level S-2</option>
+							<option value="S-3">Level S-3</option>
+							<option value="S-4">Level S-4</option>
+							<option value="I" selected>Level I</option>
+							<option value="II">Level II</option>
+							<option value="III">Level III</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>AQL Major</label>
+						<select class="form-control" id="aqlMajor">
+							<option value="0.0">0.0</option>
+							<option value="0.65">0.65</option>
+							<option value="1.0">1.0</option>
+							<option value="1.5">1.5</option>
+							<option value="2.5" selected>2.5</option>
+							<option value="4.0">4.0</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>AQL Minor</label>
+						<select class="form-control" id="aqlMinor">
+							<option value="0.0" selected>0.0</option>
+							<option value="0.65">0.65</option>
+							<option value="1.0">1.0</option>
+							<option value="1.5">1.5</option>
+							<option value="2.5">2.5</option>
+							<option value="4.0">4.0</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Measurement Level</label>
+						<select class="form-control" id="measurementLevel">
+							<option value="S-1">Level S-1</option>
+							<option value="S-2" selected>Level S-2</option>
+							<option value="S-3">Level S-3</option>
+							<option value="S-4">Level S-4</option>
+							<option value="I">Level I</option>
+							<option value="II">Level II</option>
+							<option value="III">Level III</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="sample-picking-guide">
+				<div class="guide-header">
+					<img src="/assets/apparels/images/sample-icon.svg" alt="Sample" class="guide-icon">
+					<div>
+						<h4>Sample Picking Guide</h4>
+						<p>Total pieces to inspect</p>
+					</div>
+				</div>
+				<div class="sample-info">
+					<div class="sample-item">
+						<span class="sample-label">Total Shipment Quantity</span>
+						<span class="sample-value" id="totalShipmentQty">0</span>
+						<span class="sample-unit">pieces</span>
+					</div>
+					<div class="sample-item">
+						<span class="sample-label">
+							Sample Size Required
+							<span id="sampleSizePercent">0%</span>
+						</span>
+						<span class="sample-value-large" id="sampleSizeRequired">0</span>
+						<span class="sample-unit">pieces to inspect</span>
+					</div>
+				</div>
+				<div class="acceptance-criteria">
+					<h5>Acceptance Criteria</h5>
+					<div class="criteria-grid">
+						<div class="criteria-item">
+							<span class="criteria-label">Sample Code</span>
+							<span class="criteria-value" id="sampleCode">-</span>
+						</div>
+						<div class="criteria-item">
+							<span class="criteria-label">AC Major</span>
+							<span class="criteria-value" id="acMajor">-</span>
+						</div>
+						<div class="criteria-item">
+							<span class="criteria-label">RE Major</span>
+							<span class="criteria-value" id="reMajor">-</span>
+						</div>
+						<div class="criteria-item">
+							<span class="criteria-label">AC Minor</span>
+							<span class="criteria-value" id="acMinor">-</span>
+						</div>
+						<div class="criteria-item">
+							<span class="criteria-label">RE Minor</span>
+							<span class="criteria-value" id="reMinor">-</span>
+						</div>
+					</div>
+				</div>
+				<div class="inspection-instructions">
+					<h5>Inspection Instructions</h5>
+					<ul id="inspectionInstructionsList"></ul>
+				</div>
+				<div class="size-wise-guide">
+					<h5>
+						<img src="/assets/apparels/images/guide-icon.svg" alt="Guide" class="inline-icon">
+						Size-wise Sample Picking Guide
+					</h5>
+					<div class="table-container">
+						<table class="table table-bordered" id="sizeWiseSampleTable">
+							<thead>
+								<tr>
+									<th>Size</th>
+									<th>Ship Qty</th>
+									<th>% of Total</th>
+									<th>Workmanship Sample Size</th>
+									<th>Measurement Sample Size</th>
+									<th>No of Cartons</th>
+									<th>Cartons to Pick</th>
+								</tr>
+							</thead>
+							<tbody id="sizeWiseSampleTableBody">
+								<tr class="total-row">
+									<td><strong>TOTAL</strong></td>
+									<td id="sampleTotalShipQty">0</td>
+									<td id="sampleTotalPercent">100.0%</td>
+									<td id="sampleTotalWorkmanship">0</td>
+									<td id="sampleTotalMeasurement">0</td>
+									<td id="sampleTotalCartons">0</td>
+									<td id="sampleTotalCartonsPick">0</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<p class="formula-guide">
+						<strong>Formula Guide:</strong> Workmanship Sample Size = (Size Ship Qty ÷ Total Ship Qty) × Total Sample Size Required | Measurement Sample Size = Calculated independently for each size based on its own quantity using S2 level | Cartons to Pick = √(Total Cartons) × (Size Cartons ÷ Total Cartons), rounded up to whole number
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Defect Recording Module -->
+		<div class="form-section">
+			<h2>Defect Recording Module</h2>
+			<div class="defect-input-section">
+				<h4>Add New Defect</h4>
+				<div class="defect-form-row">
+					<select class="form-control" id="defectCategory">
+						<option value="Visual">Visual</option>
+						<option value="Construction">Construction</option>
+						<option value="Measurement">Measurement</option>
+					</select>
+					<select class="form-control" id="defectDescription">
+						<option value="">Select Defect</option>
+						<option value="Stains / Dirt">Stains / Dirt</option>
+						<option value="Shade variation">Shade variation</option>
+						<option value="Holes / Snags / Cuts">Holes / Snags / Cuts</option>
+						<option value="Loose threads">Loose threads</option>
+						<option value="Fusing issues">Fusing issues</option>
+						<option value="Print defects">Print defects</option>
+						<option value="Embroidery defects">Embroidery defects</option>
+						<option value="Bonding issues (footwear)">Bonding issues (footwear)</option>
+					</select>
+					<select class="form-control" id="defectSeverity">
+						<option value="Critical">Critical</option>
+						<option value="Major">Major</option>
+						<option value="Minor" selected>Minor</option>
+					</select>
+					<input type="number" class="form-control" id="defectQuantity" placeholder="Quantity" value="1" min="1">
+					<input type="text" class="form-control" id="defectPanelLocation" placeholder="Panel Location">
+					<input type="text" class="form-control" id="defectSampleNo" placeholder="Sample No">
+				</div>
+				<div class="defect-actions">
+					<button class="btn btn-default" id="cameraBtn">
+						<i class="fa fa-camera"></i> Camera
+					</button>
+					<button class="btn btn-default" id="uploadBtn">
+						<i class="fa fa-upload"></i> Upload
+					</button>
+					<button class="btn btn-primary" id="addDefectBtn">
+						<i class="fa fa-plus"></i> Add Defect
+					</button>
+				</div>
+			</div>
+			<div class="defect-summary">
+				<div class="defect-summary-item">
+					<span class="defect-summary-label">Critical Defects</span>
+					<span class="defect-summary-value" id="criticalDefectsCount">0</span>
+				</div>
+				<div class="defect-summary-item">
+					<span class="defect-summary-label">Major Defects</span>
+					<span class="defect-summary-value" id="majorDefectsCount">0</span>
+				</div>
+				<div class="defect-summary-item">
+					<span class="defect-summary-label">Minor Defects</span>
+					<span class="defect-summary-value" id="minorDefectsCount">0</span>
+				</div>
+			</div>
+			<div class="table-container">
+				<table class="table table-bordered" id="defectsTable">
+					<thead>
+						<tr>
+							<th>Category</th>
+							<th>Defect Description</th>
+							<th>Severity</th>
+							<th>Quantity</th>
+							<th>Panel Location</th>
+							<th>Sample No</th>
+							<th>Attachment</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody id="defectsTableBody">
+						<tr class="empty-row">
+							<td colspan="8" class="text-center text-muted">No defects recorded yet</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- Inspection Checklists Summary -->
+		<div class="form-section">
+			<h2>Inspection Checklists Summary</h2>
+			<div class="checklist-summary">
+				<div class="checklist-summary-item">
+					<h5>Workmanship Quality</h5>
+					<div class="summary-stats">
+						<span id="workmanshipPass">Pass: 0</span> / <span id="workmanshipFail">Fail: 0</span>
+					</div>
+					<div class="summary-status" id="workmanshipStatus">N/A</div>
+				</div>
+				<div class="checklist-summary-item">
+					<h5>Packaging</h5>
+					<div class="summary-stats">
+						<span id="packagingPass">Pass: 0</span> / <span id="packagingFail">Fail: 0</span>
+					</div>
+					<div class="summary-status" id="packagingStatus">N/A</div>
+				</div>
+				<div class="checklist-summary-item">
+					<h5>Color / Appearance</h5>
+					<div class="summary-stats">
+						<span id="colorPass">Pass: 0</span> / <span id="colorFail">Fail: 0</span>
+					</div>
+					<div class="summary-status" id="colorStatus">N/A</div>
+				</div>
+			</div>
+
+			<!-- Workmanship Quality Checklist -->
+			<div class="checklist-detail-section">
+				<h4>Workmanship Quality Checklist</h4>
+				<div id="workmanshipChecklist" class="checklist-items"></div>
+			</div>
+
+			<!-- Packaging Checklist -->
+			<div class="checklist-detail-section">
+				<h4>Packaging Checklist</h4>
+				<div id="packagingChecklist" class="checklist-items"></div>
+			</div>
+
+			<!-- Color / Appearance Checklist -->
+			<div class="checklist-detail-section">
+				<h4>Color / Appearance Checklist</h4>
+				<div id="colorAppearanceChecklist" class="checklist-items"></div>
+			</div>
+		</div>
+
+		<!-- Final Result Calculation -->
+		<div class="form-section">
+			<h2>Final Result Calculation</h2>
+			<div class="result-display">
+				<img src="/assets/apparels/images/result-icon.svg" alt="Result" class="result-icon">
+				<div class="result-content">
+					<h3 id="finalResult">-</h3>
+					<p>Inspection Result</p>
+				</div>
+			</div>
+			<div class="result-details">
+				<div class="result-section">
+					<h5>Defect Summary</h5>
+					<div class="defect-summary-detail">
+						<div class="defect-detail-item">
+							<div class="defect-detail-header">
+								<span>Critical Defects</span>
+								<span class="defect-ac-re" id="criticalAcRe">Acceptance: 0 / Rejection: 1</span>
+							</div>
+							<div class="defect-detail-value">
+								<span id="criticalDefectsFound">0</span>
+								<span>Found</span>
+							</div>
+						</div>
+						<div class="defect-detail-item">
+							<div class="defect-detail-header">
+								<span>Major Defects</span>
+								<span class="defect-ac-re" id="majorAcRe">Acceptance: 0</span>
+							</div>
+							<div class="defect-detail-value">
+								<span id="majorDefectsFound">0</span>
+								<span>Found</span>
+							</div>
+						</div>
+						<div class="defect-detail-item">
+							<div class="defect-detail-header">
+								<span>Minor Defects</span>
+								<span class="defect-ac-re">For reference only</span>
+							</div>
+							<div class="defect-detail-value">
+								<span id="minorDefectsFound">0</span>
+								<span>Found</span>
+							</div>
+						</div>
+						<div class="defect-detail-item">
+							<div class="defect-detail-header">
+								<span>Packaging Compliance</span>
+							</div>
+							<div class="defect-detail-value">
+								<span id="packagingComplianceStatus">COMPLIANT</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="result-section">
+					<h5>Major Findings</h5>
+					<ul id="majorFindingsList"></ul>
+					<h5>Recommendations</h5>
+					<ul id="recommendationsList"></ul>
+				</div>
+			</div>
+			<div class="inspection-rules">
+				<h5>Inspection Rules Applied</h5>
+				<ul>
+					<li>• Any Critical defect → FAIL</li>
+					<li>• Any Major defect → FAIL</li>
+					<li>• Packaging non-compliant with buyer standards → FAIL</li>
+					<li>• All checks passed → PASS</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Save Button -->
+		<div class="form-actions">
+			<button class="btn btn-primary btn-lg" id="saveInspectionBtn">
+				<i class="fa fa-save"></i> Save Inspection
+			</button>
+		</div>
+	</div>
+
+	<!-- List View Container -->
+	<div class="inspection-list-container" id="inspectionListContainer" style="display: none;">
+		<div class="list-header">
+			<h2>Final Inspection Records</h2>
+			<div class="list-actions">
+				<input type="text" class="form-control" id="searchInput" placeholder="Search...">
+				<select class="form-control" id="statusFilter">
+					<option value="all">All Status</option>
+					<option value="Pass">Pass</option>
+					<option value="Fail">Fail</option>
+				</select>
+				<button class="btn btn-primary" id="exportBtn">
+					<i class="fa fa-download"></i> Export
+				</button>
+			</div>
+		</div>
+		<div class="table-container">
+			<table class="table table-bordered inspection-table" id="inspectionTable">
+				<thead>
+					<tr>
+						<th>Inspection Date</th>
+						<th>PO Number</th>
+						<th>Style No</th>
+						<th>Buyer</th>
+						<th>Order Qty</th>
+						<th>Ship Qty</th>
+						<th>Sample Size</th>
+						<th>Critical</th>
+						<th>Major</th>
+						<th>Minor</th>
+						<th>Status</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody id="inspectionTableBody">
+					<tr>
+						<td colspan="12" class="text-center text-muted">No inspection records found</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+

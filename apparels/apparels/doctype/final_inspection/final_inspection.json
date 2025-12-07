@@ -1,0 +1,341 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-12-07 20:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "inspection_date",
+  "inspection_type",
+  "inspector_name",
+  "column_break_1",
+  "factory_name",
+  "factory_address",
+  "production_line",
+  "factory_contact",
+  "section_break_1",
+  "brand_buyer",
+  "department",
+  "product_category",
+  "style_no",
+  "article_model_no",
+  "season",
+  "size_range",
+  "colorways",
+  "section_break_2",
+  "po_number",
+  "total_order_qty",
+  "total_ship_qty",
+  "shipment_date",
+  "packaging_type",
+  "packaging_compliance",
+  "section_break_3",
+  "inspection_level",
+  "aql_major",
+  "aql_minor",
+  "measurement_level",
+  "sample_size",
+  "section_break_4",
+  "size_wise_quantities",
+  "section_break_5",
+  "critical_defects",
+  "major_defects",
+  "minor_defects",
+  "defects_detail",
+  "section_break_6",
+  "status",
+  "size_wise_data",
+  "defects",
+  "checklist_data"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "FI-.YYYY.-###"
+  },
+  {
+   "fieldname": "inspection_date",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Inspection Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inspection_type",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Inspection Type",
+   "options": "Final\nInline\nMidline\nShipment Sample",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inspector_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Inspector Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "factory_name",
+   "fieldtype": "Data",
+   "label": "Factory Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "factory_address",
+   "fieldtype": "Small Text",
+   "label": "Factory Address"
+  },
+  {
+   "fieldname": "production_line",
+   "fieldtype": "Data",
+   "label": "Production Line / Floor"
+  },
+  {
+   "fieldname": "factory_contact",
+   "fieldtype": "Data",
+   "label": "Factory Contact Person"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Buyer & Product Information"
+  },
+  {
+   "fieldname": "brand_buyer",
+   "fieldtype": "Data",
+   "label": "Brand / Buyer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Select",
+   "label": "Department",
+   "options": "Mens\nWomens\nKids\nFootwear",
+   "reqd": 1
+  },
+  {
+   "fieldname": "product_category",
+   "fieldtype": "Data",
+   "label": "Product Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "style_no",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Style No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "article_model_no",
+   "fieldtype": "Data",
+   "label": "Article / Model No"
+  },
+  {
+   "fieldname": "season",
+   "fieldtype": "Data",
+   "label": "Season"
+  },
+  {
+   "fieldname": "size_range",
+   "fieldtype": "Data",
+   "label": "Size Range"
+  },
+  {
+   "fieldname": "colorways",
+   "fieldtype": "Data",
+   "label": "Colorways"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Order Information"
+  },
+  {
+   "fieldname": "po_number",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Purchase Order No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_order_qty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total Order Quantity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_ship_qty",
+   "fieldtype": "Int",
+   "label": "Total Ship Quantity"
+  },
+  {
+   "fieldname": "shipment_date",
+   "fieldtype": "Date",
+   "label": "Shipment Date"
+  },
+  {
+   "fieldname": "packaging_type",
+   "fieldtype": "Data",
+   "label": "Packaging Type"
+  },
+  {
+   "fieldname": "packaging_compliance",
+   "fieldtype": "Check",
+   "label": "Packaging Compliance (Buyer Standard)"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "AQL Parameters"
+  },
+  {
+   "fieldname": "inspection_level",
+   "fieldtype": "Select",
+   "label": "Inspection Level",
+   "options": "S-1\nS-2\nS-3\nS-4\nI\nII\nIII"
+  },
+  {
+   "fieldname": "aql_major",
+   "fieldtype": "Float",
+   "label": "AQL Major"
+  },
+  {
+   "fieldname": "aql_minor",
+   "fieldtype": "Float",
+   "label": "AQL Minor"
+  },
+  {
+   "fieldname": "measurement_level",
+   "fieldtype": "Select",
+   "label": "Measurement Level",
+   "options": "S-1\nS-2\nS-3\nS-4\nI\nII\nIII"
+  },
+  {
+   "fieldname": "sample_size",
+   "fieldtype": "Int",
+   "label": "Sample Size"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Size-wise Quantities"
+  },
+  {
+   "fieldname": "size_wise_quantities",
+   "fieldtype": "Table",
+   "label": "Size-wise Quantities",
+   "options": "Final Inspection Size Wise Quantities"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Defects"
+  },
+  {
+   "fieldname": "critical_defects",
+   "fieldtype": "Int",
+   "label": "Critical Defects"
+  },
+  {
+   "fieldname": "major_defects",
+   "fieldtype": "Int",
+   "label": "Major Defects"
+  },
+  {
+   "fieldname": "minor_defects",
+   "fieldtype": "Int",
+   "label": "Minor Defects"
+  },
+  {
+   "fieldname": "defects_detail",
+   "fieldtype": "Table",
+   "label": "Defects Detail",
+   "options": "Final Inspection Defects Detail"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Results"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Pass\nFail"
+  },
+  {
+   "fieldname": "size_wise_data",
+   "fieldtype": "Long Text",
+   "hidden": 1,
+   "label": "Size Wise Data (JSON)"
+  },
+  {
+   "fieldname": "defects",
+   "fieldtype": "Long Text",
+   "hidden": 1,
+   "label": "Defects (JSON)"
+  },
+  {
+   "fieldname": "checklist_data",
+   "fieldtype": "Long Text",
+   "hidden": 1,
+   "label": "Checklist Data (JSON)"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-12-07 20:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Apparels",
+ "name": "Final Inspection",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "role": "All"
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
+

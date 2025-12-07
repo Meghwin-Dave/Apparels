@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-12-07 20:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "size",
+  "order_qty",
+  "ship_qty",
+  "cartons"
+ ],
+ "fields": [
+  {
+   "fieldname": "size",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Size"
+  },
+  {
+   "fieldname": "order_qty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Order Qty"
+  },
+  {
+   "fieldname": "ship_qty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Ship Qty"
+  },
+  {
+   "fieldname": "cartons",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Cartons"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-12-07 20:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Apparels",
+ "name": "Final Inspection Size Wise Quantities",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
+
