@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-12-03 23:40:58.905775",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "carton_id",
+  "inspection_date",
+  "result",
+  "inspector_name",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "carton_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Carton ID",
+   "options": "Carton Tracking"
+  },
+  {
+   "fieldname": "inspection_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Inspection Date"
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Select",
+   "label": "Result",
+   "options": "Pass\nFail\nConditional Pass\nPending"
+  },
+  {
+   "fieldname": "inspector_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Inspector Name",
+   "options": "User"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-12-03 23:42:27.749506",
+ "modified_by": "Administrator",
+ "module": "Apparels",
+ "name": "Carton Inspection Result",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

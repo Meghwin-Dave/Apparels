@@ -1,0 +1,159 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-12-03 23:20:50.688872",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "asn_code",
+  "order_type",
+  "order_no",
+  "total_cartons",
+  "created_on",
+  "column_break_uafz",
+  "work_order",
+  "packing_list",
+  "customer",
+  "total_pieces",
+  "total_stickers",
+  "status",
+  "master_qr_code",
+  "section_break_imrb",
+  "carton_sticker_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "ASN-"
+  },
+  {
+   "description": "Unique identifier (e.g., ASN20240112345NIKE001).",
+   "fieldname": "asn_code",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "ASN Code"
+  },
+  {
+   "fieldname": "work_order",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "Work Order",
+   "options": "Work Order"
+  },
+  {
+   "fieldname": "order_type",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "label": "Order Type",
+   "options": "Purchase Order\nSales Order"
+  },
+  {
+   "fieldname": "order_no",
+   "fieldtype": "Dynamic Link",
+   "label": "Order No",
+   "options": "order_type"
+  },
+  {
+   "fieldname": "packing_list",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "Packing List",
+   "options": "Packing List"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break_uafz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_cartons",
+   "fieldtype": "Int",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Total Cartons"
+  },
+  {
+   "fieldname": "total_pieces",
+   "fieldtype": "Int",
+   "label": "Total Pieces"
+  },
+  {
+   "fieldname": "total_stickers",
+   "fieldtype": "Int",
+   "label": "Total Stickers"
+  },
+  {
+   "fieldname": "created_on",
+   "fieldtype": "Datetime",
+   "label": "Created On"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nPending\nGenerated\nPrinted\nDispatched"
+  },
+  {
+   "fieldname": "master_qr_code",
+   "fieldtype": "Image",
+   "label": "Master QR Code"
+  },
+  {
+   "fieldname": "section_break_imrb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "carton_sticker_details",
+   "fieldtype": "Table",
+   "label": "Carton Sticker Details",
+   "options": "Carton Sticker Details"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-12-03 23:31:24.379394",
+ "modified_by": "Administrator",
+ "module": "Apparels",
+ "name": "Advance Shipment Notice",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

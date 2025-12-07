@@ -1,0 +1,158 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-12-03 23:43:16.627399",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "inspection_id",
+  "work_order",
+  "order_type",
+  "order_no",
+  "customer",
+  "scheduled_date",
+  "column_break_dasc",
+  "styleproduct",
+  "inspector",
+  "total_cartons",
+  "cartons_inspected",
+  "progress",
+  "inspection_status",
+  "section_break_cnrn",
+  "quality_issue_log",
+  "carton_inspection_result"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "CQI-"
+  },
+  {
+   "fieldname": "inspection_id",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Inspection ID"
+  },
+  {
+   "fieldname": "work_order",
+   "fieldtype": "Link",
+   "label": "Work Order",
+   "options": "Work Order"
+  },
+  {
+   "fieldname": "order_type",
+   "fieldtype": "Select",
+   "label": "Order Type",
+   "options": "Purchase Order\nSales Order"
+  },
+  {
+   "fieldname": "order_no",
+   "fieldtype": "Dynamic Link",
+   "label": "Order No",
+   "options": "order_type"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break_dasc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "styleproduct",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Style/Product"
+  },
+  {
+   "fieldname": "inspector",
+   "fieldtype": "Link",
+   "label": "Inspector",
+   "options": "User"
+  },
+  {
+   "fieldname": "total_cartons",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total Cartons"
+  },
+  {
+   "fieldname": "cartons_inspected",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Cartons Inspected"
+  },
+  {
+   "fieldname": "progress",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Progress"
+  },
+  {
+   "fieldname": "scheduled_date",
+   "fieldtype": "Date",
+   "label": "Scheduled Date"
+  },
+  {
+   "fieldname": "inspection_status",
+   "fieldtype": "Select",
+   "label": "Inspection Status",
+   "options": "Pending\nIn Progress\nCompleted"
+  },
+  {
+   "fieldname": "section_break_cnrn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "quality_issue_log",
+   "fieldtype": "Table",
+   "label": "Quality Issue Log",
+   "options": "Quality Issue Log"
+  },
+  {
+   "fieldname": "carton_inspection_result",
+   "fieldtype": "Table",
+   "label": "Carton Inspection Result",
+   "options": "Carton Inspection Result"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-12-03 23:47:44.378336",
+ "modified_by": "Administrator",
+ "module": "Apparels",
+ "name": "Carton Quality Inspection",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
