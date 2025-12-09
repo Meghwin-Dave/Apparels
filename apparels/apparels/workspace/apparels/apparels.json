@@ -1,0 +1,108 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"0HhAVa4ouT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Apparels</span>\",\"col\":12}},{\"id\":\"FtUb7Y7w44\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Packing Configuration\",\"col\":3}},{\"id\":\"v0BypudHA9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Carton Tracking\",\"col\":3}},{\"id\":\"PrmlY25StM\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Advance Shipment Notice\",\"col\":3}},{\"id\":\"RZKokFfmXP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Carton Shipment\",\"col\":3}},{\"id\":\"1IaGsxcrsO\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Production Completion\",\"col\":3}},{\"id\":\"hIwr2TlVxj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Packing List\",\"col\":3}},{\"id\":\"66HCiYEWUZ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Carton Quality Inspection\",\"col\":3}},{\"id\":\"IvuzpyLa3m\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Final Inspection\",\"col\":3}},{\"id\":\"fRIbJg4B4W\",\"type\":\"paragraph\",\"data\":{\"text\":\"Pages\",\"col\":12}},{\"id\":\"r_XSymI77Z\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Apparel Flow Dashboard\",\"col\":3}},{\"id\":\"P9-0ATzYek\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Final Inspection Application\",\"col\":3}}]",
+ "creation": "2025-12-09 12:27:53.628175",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "tag",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Apparels",
+ "links": [],
+ "modified": "2025-12-09 12:31:48.136687",
+ "modified_by": "Administrator",
+ "module": "Apparels",
+ "name": "Apparels",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 29.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Packing Configuration",
+   "link_to": "Packing Configuration",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Carton Tracking",
+   "link_to": "Carton Tracking",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Advance Shipment Notice",
+   "link_to": "Advance Shipment Notice",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Carton Shipment",
+   "link_to": "Carton Shipment",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Production Completion",
+   "link_to": "Production Completion",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Packing List",
+   "link_to": "Packing List",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Carton Quality Inspection",
+   "link_to": "Carton Quality Inspection",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Final Inspection",
+   "link_to": "Final Inspection",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Apparel Flow Dashboard",
+   "link_to": "apparelflow-dashboard",
+   "type": "Page"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Final Inspection Application",
+   "link_to": "final-inspection-application",
+   "type": "Page"
+  }
+ ],
+ "title": "Apparels"
+}
